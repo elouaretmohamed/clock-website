@@ -7,120 +7,144 @@
 body {
     font-family: 'Arial', sans-serif;
     background: #2c3e50;
-    transition: background 0.5s ease;
-    height: 100vh;
+    transition: all 0.5s ease;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    color: white;
 }
 
 .container {
     text-align: center;
     padding: 2rem;
+    width: 100%;
+    max-width: 1200px;
 }
 
-.clock {
-    font-size: 5rem;
-    color: white;
-    margin-bottom: 2rem;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-}
-
-.controls {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.btn, .bg-btn, .social-btn {
-    padding: 0.8rem 1.5rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: transform 0.2s ease;
-}
-
-.btn:hover, .bg-btn:hover, .social-btn:hover {
-    transform: scale(1.05);
-}
-
-.bg-btn {
-    background: white;
-    color: #333;
-}
-
-.social-btn {
-    text-decoration: none;
-    color: white;
-    background: #3498db;
-    display: inline-block;
-}
-
-.social-btn i {
-    font-size: 1.2rem;
-}
-
-@media (max-width: 768px) {
-    .clock {
-        font-size: 3rem;
-    }
-}
-/* New Features Styling */
-.additional-features {
-    margin-top: 2rem;
-}
-
-.spotify-player {
-    margin: 1rem 0;
+.main-clock {
+    font-size: 6rem;
+    font-weight: bold;
+    text-shadow: 4px 4px 10px rgba(0,0,0,0.3);
+    margin: 2rem 0;
+    letter-spacing: 2px;
 }
 
 .activity-modes {
     display: flex;
-    gap: 1rem;
+    gap: 1.5rem;
     justify-content: center;
-    margin: 1rem 0;
+    margin: 2rem 0;
 }
 
 .mode-btn {
     padding: 1rem 2rem;
-    border: 2px solid white;
-    border-radius: 25px;
-    background: transparent;
+    border: 2px solid rgba(255,255,255,0.2);
+    border-radius: 50px;
+    background: rgba(255,255,255,0.1);
     color: white;
     cursor: pointer;
     transition: all 0.3s ease;
+    font-size: 1.1rem;
 }
 
 .mode-btn:hover {
-    background: white;
-    color: #2c3e50;
+    background: rgba(255,255,255,0.2);
+    transform: translateY(-2px);
+}
+
+.spotify-player {
+    margin: 2rem 0;
+}
+
+.controls {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 .world-clocks {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 1rem;
-    border-radius: 10px;
-    margin-top: 2rem;
+    background: rgba(255,255,255,0.1);
+    padding: 1.5rem;
+    border-radius: 15px;
 }
 
-.clock-selector {
+#worldClocksContainer {
+    margin-top: 1rem;
     display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
     justify-content: center;
-    margin-bottom: 1rem;
 }
 
 .world-clock-item {
-    background: rgba(0, 0, 0, 0.2);
-    padding: 1rem;
-    margin: 0.5rem;
+    background: rgba(0,0,0,0.2);
+    padding: 0.8rem 1.5rem;
     border-radius: 8px;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
 }
 
 .remove-clock {
-    margin-left: 1rem;
-    color: #ff4757;
     cursor: pointer;
+    color: #ff6b6b;
+    font-weight: bold;
+}
+
+.social-fullscreen {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+}
+
+.social-share {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    transition: transform 0.2s ease;
+}
+
+.social-btn:hover {
+    transform: scale(1.1);
+}
+
+.twitter { background: #1DA1F2; }
+.facebook { background: #1877F2; }
+.linkedin { background: #0A66C2; }
+
+.btn {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.1);
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+@media (max-width: 768px) {
+    .main-clock {
+        font-size: 4rem;
+    }
+    
+    .activity-modes {
+        flex-direction: column;
+    }
 }
