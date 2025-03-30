@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Clock</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="clock" id="clock">00:00:00</div>
+        
+        <div class="controls">
+            <button class="btn" id="fullscreenBtn">
+                <i class="fas fa-expand"></i>
+            </button>
+            
+            <div class="background-options">
+                <button data-bg="#2c3e50" class="bg-btn">Work</button>
+                <button data-bg="#1a535c" class="bg-btn">Relax</button>
+                <button data-bg="#4a306d" class="bg-btn">Focus</button>
+            </div>
+            
+            <div class="social-share">
+                <a href="#" id="twitter" class="social-btn">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" id="facebook" class="social-btn">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="#" id="linkedin" class="social-btn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
