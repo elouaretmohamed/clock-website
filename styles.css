@@ -5,146 +5,89 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    background: #2c3e50;
-    transition: all 0.5s ease;
+    background: #000;
+    color: #00ff00;
+    font-family: 'Courier New', monospace;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
 }
 
 .container {
     text-align: center;
-    padding: 2rem;
     width: 100%;
-    max-width: 1200px;
 }
 
-.main-clock {
-    font-size: 6rem;
+.clock {
+    font-size: 8rem;
     font-weight: bold;
-    text-shadow: 4px 4px 10px rgba(0,0,0,0.3);
+    text-shadow: 0 0 20px #00ff00;
     margin: 2rem 0;
-    letter-spacing: 2px;
 }
 
-.activity-modes {
+.alarm-controls {
+    margin: 2rem 0;
     display: flex;
-    gap: 1.5rem;
+    gap: 1rem;
     justify-content: center;
-    margin: 2rem 0;
+    align-items: center;
 }
 
-.mode-btn {
-    padding: 1rem 2rem;
-    border: 2px solid rgba(255,255,255,0.2);
-    border-radius: 50px;
-    background: rgba(255,255,255,0.1);
-    color: white;
+.alarm-controls input {
+    width: 80px;
+    padding: 0.5rem;
+    background: #111;
+    border: 1px solid #00ff00;
+    color: #00ff00;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+button {
+    padding: 0.8rem 1.5rem;
+    background: #002200;
+    border: 1px solid #00ff00;
+    color: #00ff00;
     cursor: pointer;
     transition: all 0.3s ease;
-    font-size: 1.1rem;
 }
 
-.mode-btn:hover {
-    background: rgba(255,255,255,0.2);
-    transform: translateY(-2px);
+button:hover {
+    background: #004400;
 }
 
-.spotify-player {
-    margin: 2rem 0;
+#alarmList {
+    margin: 2rem auto;
+    max-width: 400px;
 }
 
-.controls {
-    margin-top: 3rem;
+.alarm-item {
     display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
-
-.world-clocks {
-    background: rgba(255,255,255,0.1);
-    padding: 1.5rem;
-    border-radius: 15px;
-}
-
-#worldClocksContainer {
-    margin-top: 1rem;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
-}
-
-.world-clock-item {
-    background: rgba(0,0,0,0.2);
-    padding: 0.8rem 1.5rem;
-    border-radius: 8px;
-    display: inline-flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 1rem;
+    padding: 1rem;
+    border: 1px solid #00ff00;
+    margin: 0.5rem 0;
 }
 
-.remove-clock {
-    cursor: pointer;
-    color: #ff6b6b;
-    font-weight: bold;
+.simple-controls {
+    position: fixed;
+    top: 20px;
+    right: 20px;
 }
 
-.social-fullscreen {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    align-items: center;
-}
-
-.social-share {
-    display: flex;
-    gap: 1rem;
-}
-
-.social-btn {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    color: white;
-    transition: transform 0.2s ease;
-}
-
-.social-btn:hover {
-    transform: scale(1.1);
-}
-
-.twitter { background: #1DA1F2; }
-.facebook { background: #1877F2; }
-.linkedin { background: #0A66C2; }
-
-.btn {
-    padding: 0.8rem 1.5rem;
-    border: none;
-    border-radius: 8px;
-    background: rgba(255,255,255,0.1);
-    color: white;
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-
-.btn:hover {
-    background: rgba(255,255,255,0.2);
+#fullscreenBtn {
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
 }
 
 @media (max-width: 768px) {
-    .main-clock {
+    .clock {
         font-size: 4rem;
     }
     
-    .activity-modes {
+    .alarm-controls {
         flex-direction: column;
     }
 }
