@@ -91,3 +91,184 @@ button:hover {
         flex-direction: column;
     }
 }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #1a1a1a;
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+    padding: 2rem;
+}
+
+.mode-switcher {
+    margin-bottom: 2rem;
+}
+
+.mode-btn {
+    padding: 0.8rem 1.5rem;
+    margin: 0 0.5rem;
+    background: #333;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.mode-btn.active {
+    background: #4CAF50;
+}
+
+.flip-clock {
+    perspective: 1000px;
+    margin: 2rem 0;
+}
+
+.time-segment {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.flip-card {
+    display: inline-block;
+    position: relative;
+    width: 100px;
+    height: 150px;
+    margin: 0 5px;
+    font-size: 4rem;
+    font-weight: bold;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.flip-card .top,
+.flip-card .bottom {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #333;
+    backface-visibility: hidden;
+    overflow: hidden;
+}
+
+.flip-card .top {
+    top: 0;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    border-radius: 10px 10px 0 0;
+}
+
+.flip-card .bottom {
+    bottom: 0;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    border-radius: 0 0 10px 10px;
+    transform: rotateX(180deg);
+}
+
+.flip-card .bottom::after {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: rgba(255,255,255,0.1);
+}
+
+.flip-card.flipping .top {
+    transform-origin: bottom;
+    animation: flipTop 0.5s ease-in;
+}
+
+.flip-card.flipping .bottom {
+    transform-origin: top;
+    animation: flipBottom 0.5s 0.5s ease-out;
+}
+
+@keyframes flipTop {
+    from { transform: rotateX(0deg); }
+    to { transform: rotateX(-180deg); }
+}
+
+@keyframes flipBottom {
+    from { transform: rotateX(180deg); }
+    to { transform: rotateX(0deg); }
+}
+
+.separator {
+    font-size: 4rem;
+    color: #4CAF50;
+    align-self: center;
+    margin: 0 0.5rem;
+}
+
+.controls {
+    margin-top: 2rem;
+}
+
+button {
+    padding: 0.8rem 1.5rem;
+    margin: 0 0.5rem;
+    background: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: #45a049;
+}
+
+input {
+    padding: 0.8rem;
+    width: 80px;
+    margin: 0 0.5rem;
+    background: #333;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+}
+
+#fullscreenBtn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 0.8rem;
+    background: #333;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .flip-card {
+        width: 60px;
+        height: 100px;
+        font-size: 2.5rem;
+    }
+    
+    .separator {
+        font-size: 2.5rem;
+    }
+}
