@@ -3,64 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Smart Activity Clock with Spotify integration, world times, and productivity features">
-    <meta name="author" content="Your Name">
-    <meta property="og:title" content="Smart Activity Clock">
-    <meta property="og:description" content="Multi-feature digital clock with Spotify playlists and world time zones">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://your-netlify-site.netlify.app">
-    <meta property="og:image" content="https://your-netlify-site.netlify.app/thumbnail.png">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Smart Activity Clock">
-    <meta name="twitter:description" content="Boost productivity with integrated Spotify playlists and world clocks">
-    <meta name="twitter:image" content="https://your-netlify-site.netlify.app/thumbnail.png">
+    <meta name="description" content="Minimalist Digital Clock with Alarm Function">
     <link rel="icon" type="image/png" href="/favicon.png">
-    <title>Smart Activity Clock</title>
+    <title>Centered Clock</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <div class="container">
-        <!-- Main Clock -->
-        <div class="main-clock" id="clock">00:00:00</div>
+        <!-- Main Clock Display -->
+        <div class="clock" id="clock">00:00:00</div>
 
-        <!-- Activity Modes -->
-        <div class="activity-modes">
-            <button class="mode-btn" data-mode="work">🧑💻 Work</button>
-            <button class="mode-btn" data-mode="workout">🏋️ Workout</button>
-            <button class="mode-btn" data-mode="lecture">📚 Lecture</button>
+        <!-- Alarm Controls -->
+        <div class="alarm-controls">
+            <input type="number" id="alarmHr" min="0" max="23" placeholder="HH">
+            <input type="number" id="alarmMin" min="0" max="59" placeholder="MM">
+            <input type="number" id="alarmSec" min="0" max="59" placeholder="SS">
+            <button id="setAlarm">Set Alarm</button>
         </div>
 
-        <!-- Spotify Integration -->
-        <div class="spotify-player">
-            <iframe id="spotifyIFrame" style="border-radius:12px" width="300" height="80" frameborder="0" allowfullscreen></iframe>
-        </div>
+        <!-- Active Alarms List -->
+        <div id="alarmList"></div>
 
-        <!-- Controls Section -->
-        <div class="controls">
-            <!-- World Clocks -->
-            <div class="world-clocks">
-                <select id="timezoneSelect">
-                    <option value="auto">Local Time</option>
-                    <option value="America/New_York">New York</option>
-                    <option value="Europe/London">London</option>
-                    <option value="Asia/Tokyo">Tokyo</option>
-                </select>
-                <button id="addClockBtn" class="btn">Add Clock</button>
-                <div id="worldClocksContainer"></div>
-            </div>
-
-            <!-- Social & Fullscreen -->
-            <div class="social-fullscreen">
-                <div class="social-share">
-                    <a href="#" class="social-btn twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="social-btn facebook"><i class="fab fa-facebook"></i></a>
-                    <a href="#" class="social-btn linkedin"><i class="fab fa-linkedin"></i></a>
-                </div>
-                <button id="fullscreenBtn" class="btn"><i class="fas fa-expand"></i></button>
-            </div>
+        <!-- Simple Controls -->
+        <div class="simple-controls">
+            <button id="fullscreenBtn">⛶</button>
         </div>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
