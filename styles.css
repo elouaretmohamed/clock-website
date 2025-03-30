@@ -66,3 +66,61 @@ body {
         font-size: 3rem;
     }
 }
+/* New Features Styling */
+.additional-features {
+    margin-top: 2rem;
+}
+
+.spotify-player {
+    margin: 1rem 0;
+}
+
+.activity-modes {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.mode-btn {
+    padding: 1rem 2rem;
+    border: 2px solid white;
+    border-radius: 25px;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.mode-btn:hover {
+    background: white;
+    color: #2c3e50;
+}
+
+.world-clocks {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-radius: 10px;
+    margin-top: 2rem;
+}
+
+.clock-selector {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.world-clock-item {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    margin: 0.5rem;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.remove-clock {
+    margin-left: 1rem;
+    color: #ff4757;
+    cursor: pointer;
+}
