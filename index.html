@@ -3,68 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern Flip Clock</title>
+    <title>FUP CLOCK 2.0</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <div class="container">
-        <!-- Clock Modes -->
-        <div class="mode-switcher">
-            <button class="mode-btn active" data-mode="clock">Clock</button>
-            <button class="mode-btn" data-mode="stopwatch">Stopwatch</button>
-            <button class="mode-btn" data-mode="timer">Timer</button>
-        </div>
-
-        <!-- Flip Clock Display -->
-        <div class="flip-clock" id="clock">
+        <div class="clock-header">FUP CLOCK 2.0</div>
+        
+        <!-- Flip Clock -->
+        <div class="flip-clock">
             <div class="time-segment">
-                <div class="flip-card hours-tens">
-                    <div class="top">0</div>
-                    <div class="bottom">0</div>
+                <div class="flip-card">
+                    <div class="top">4</div>
+                    <div class="bottom">4</div>
                 </div>
-                <div class="flip-card hours-ones">
-                    <div class="top">0</div>
-                    <div class="bottom">0</div>
-                </div>
-                <div class="separator">:</div>
-                <div class="flip-card minutes-tens">
-                    <div class="top">0</div>
-                    <div class="bottom">0</div>
-                </div>
-                <div class="flip-card minutes-ones">
-                    <div class="top">0</div>
-                    <div class="bottom">0</div>
+                <div class="flip-card">
+                    <div class="top">4</div>
+                    <div class="bottom">4</div>
                 </div>
                 <div class="separator">:</div>
-                <div class="flip-card seconds-tens">
+                <div class="flip-card">
                     <div class="top">0</div>
-                    <div class="bottom">0</div>
+                    <div class="bottom">3</div>
                 </div>
-                <div class="flip-card seconds-ones">
+                <div class="flip-card">
+                    <div class="top">4</div>
+                    <div class="bottom">4</div>
+                </div>
+                <div class="separator">:</div>
+                <div class="flip-card">
                     <div class="top">0</div>
-                    <div class="bottom">0</div>
+                    <div class="bottom">3</div>
                 </div>
             </div>
         </div>
 
-        <!-- Stopwatch Controls -->
-        <div class="controls stopwatch-controls hidden">
-            <button id="startStopwatch">Start</button>
-            <button id="resetStopwatch">Reset</button>
-            <div class="lap-times" id="lapTimes"></div>
-        </div>
-
-        <!-- Timer Controls -->
-        <div class="controls timer-controls hidden">
-            <input type="number" id="timerHours" min="0" placeholder="H">
-            <input type="number" id="timerMinutes" min="0" max="59" placeholder="M">
-            <input type="number" id="timerSeconds" min="0" max="59" placeholder="S">
-            <button id="startTimer">Start</button>
-            <button id="resetTimer">Reset</button>
-        </div>
-
-        <!-- Fullscreen Toggle -->
+        <!-- Fullscreen Button -->
         <button id="fullscreenBtn">
             <i class="fas fa-expand"></i>
         </button>
